@@ -1,0 +1,5 @@
+require 'dotenv'
+Dotenv.load
+development:
+  adapter: sqlite3
+  database: db/development.db
