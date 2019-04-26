@@ -1,0 +1,27 @@
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="assets/js/upload.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/css/upload.css">
+
+<%= erb :header %>
+<div id="space">
+  <form  action="" method="POST">
+    <div class= "main">
+        <div class = "form">
+          <input type="file" name="image">
+          <p>ここにエモ画像をドラッグ＆ドロップ</p>
+          <button type="submit">Upload</button>
+        </div>
+    </div>
+
+    <div class = "oppai">
+      <p>タイトル</p>
+      <input id="title" name="title" type="text" placeholder="タイトルを入力" />
+    </div>
+    <div class = "tinko">
+    <p>本文</p>
+    <textarea id="text" name="text" type="text" placeholder="本文を入力" /></textarea>
+  </div>
+  </form>
+</div>
+
+<%= erb :footer %>
