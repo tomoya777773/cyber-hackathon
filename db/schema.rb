@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190424155428) do
+ActiveRecord::Schema.define(version: 20190424180608) do
+
+  create_table "albums", force: :cascade do |t|
+    t.text   "url"
+    t.string "title"
+    t.text   "text"
+    t.float  "score"
+    t.string "label"
+  end
 
   create_table "tests", force: :cascade do |t|
     t.string   "number"
