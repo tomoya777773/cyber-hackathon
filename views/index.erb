@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 
-<link rel="stylesheet" type="text/css" media="all" href="assets/css/pics.css">
+<link rel="stylesheet" type="text/css" media="all" href="assets/css/pic.css">
 
 <%= erb :header %>
 
-<div class=main>
+<div class="main">
   <div class="inline-block">
-    <div class=pic>
-      <img width="220" height="130" src="images/sam/01.jpeg" alt="" />
-      <p> afdskfjk 👍</p>
+    <% @albums.each do |album| %>
+      <div class="pic">
+      <img width="250" height="150" src="/assets/images/<%= album.url %>.jpg" alt="" />
+      <p class="title"><%= album.title %></p>
+      </div>
+    <% end %>
   </div>
- </div>
 </div>
 
 <%= erb :footer %>

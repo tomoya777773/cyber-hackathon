@@ -8,8 +8,9 @@ require "json"
 require "./models/album.rb"
 
 get '/' do
-  @alubm = Album.all
+  @albums = Album.all
   erb :index
+
 end
 
 post '/upload' do
