@@ -23,13 +23,17 @@ get '/upload' do
 end
 
 post '/upload' do
-  title = params[:title]
-  text = params[:text]
+  @title = params[:title]
+  @text = params[:text]
   image = params[:image]
+  @image_path = "assets/images/" + "#{image["filename"]}"
   output_path = "public/assets/images/" + "#{image["filename"]}"
   File.open(output_path, 'w+b') do |fp|
     fp.write image["tempfile"].read
+
+  erb:finish_upload
   end
+
 end
 
 API_URL = 'http://c0eae18c.ngrok.io/get_class'
