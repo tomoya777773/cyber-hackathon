@@ -25,6 +25,8 @@
     line-height: 170px;
     color: #ffffff;
     font-family: Arial;
+    margin-left: -280px;
+    margin-top: 30px;
 }
 .main input{
     position: absolute;
@@ -42,7 +44,7 @@
     color: #fff;
     background: #FFA500;
     border: none;
-    width: 508px;
+    width: 1080px;
     height: 35px;
     margin-top: -20px;
     margin-left: -4px;
@@ -59,16 +61,16 @@
     border:0;
   }
 
-.oppai{
-  margin-top:  100px;
+.upload_title{
+  margin-top:  90px;
   margin-left: 850px;
   color: #FFA500;
 }
 
-.tinko{
-  margin-top:  40px;
+.upload_text{
+  margin-top:  -5px;
   margin-left: 850px;
-  color: #FFA500;
+    color: #FFA500;
 }
 
 #title{
