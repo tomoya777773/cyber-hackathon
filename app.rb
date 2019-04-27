@@ -19,6 +19,13 @@ get '/upload' do
 end
 
 post '/upload' do
+  title = params[:title]
+  text = params[:text]
+  image = params[:image]
+  output_path = "public/assets/images/" + "#{image["filename"]}"
+  File.open(output_path, 'w+b') do |fp|
+    fp.write image["tempfile"].read
+  end
 end
 
 API_URL = 'http://c0eae18c.ngrok.io/get_class'
