@@ -4,7 +4,7 @@
 
 <%= erb :header %>
 <div id="space">
-  <form  action="" method="POST">
+  <form action="/upload" method="post" enctype="multipart/form-data">
     <div class= "main">
         <div class = "form">
           <input type="file" name="image">
@@ -12,16 +12,16 @@
           <button type="submit">Upload</button>
         </div>
     </div>
-
     <div class = "upload_title">
-      <p>タイトル</p>
+      <label for="title">タイトル</label>
       <input id="title" name="title" type="text" placeholder="タイトルを入力" />
     </div>
 
     <div class = "upload_text">
-      <p>本文</p>
+      <label for="text">本文</label>
       <textarea id="text" name="text" type="text" placeholder="本文を入力" /></textarea>
     </div>
+
   </form>
 </div>
 
