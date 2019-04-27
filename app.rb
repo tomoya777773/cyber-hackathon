@@ -5,10 +5,14 @@ require "net/http"
 require "uri"
 require "openssl"
 require "json"
+require "will_paginate/view_helpers/sinatra"
+require "will_paginate/active_record"
 require "./models/album.rb"
 
+helpers WillPaginate::Sinatra, WillPaginate::Sinatra::Helpers
+
 get '/' do
-  @albums = Album.all
+  @albums = Album.all.paginate(:page => params[:page], :per_page => 5)
   erb :index
 
 end

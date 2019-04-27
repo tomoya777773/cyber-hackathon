@@ -8,10 +8,13 @@
   <div class="inline-block">
     <% @albums.each do |album| %>
       <div class="pic">
-      <img width="250" height="150" src="/assets/images/<%= album.url %>.jpg" alt="" />
-      <p class="title"><%= album.title %></p>
+        <img width="250" height="150" src="/assets/images/<%= album.url %>.jpg" alt="" />
+        <p class="title"><%= album.title %></p>
       </div>
     <% end %>
+  <div class="apple_pagination">
+  <%= will_paginate @albums, :container => false %>
+</div>
   </div>
 </div>
 
