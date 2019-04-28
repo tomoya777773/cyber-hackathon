@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<link rel="stylesheet" type="text/css" media="all" href="assets/css/pic.css">
+<link rel="stylesheet" type="text/css" media="all" href="/assets/css/pic.css">
 
 <%= erb :header %>
 
@@ -19,17 +19,17 @@
   <div class="inline-block">
     <% @albums.each do |album| %>
       <div class="pic">
-        <img class="cover" src="/assets/images/<%= album.url %>.jpg" alt="" />
+        <a href="/images/<%= album.id %>"><img class="cover" src="/assets/images/<%= album.url %>.jpg" alt="" /></a>
         <div>
         <p class="title"></p>
         <%= album.title  %> &nbsp;&nbsp; 👍 <%= album.score %>
         </div>
       </div>
     <% end %>
+  </div>
   <div class="apple_pagination">
   <%= will_paginate @albums, :container => false %>
 </div>
-  </div>
 </div>
 
 <%= erb :footer %>
