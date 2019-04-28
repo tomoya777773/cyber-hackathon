@@ -1,7 +1,27 @@
 @charset "utf-8";
 
+.welcome{
+  clear: both;
+  width: 955px;
+  font-size: 14px;
+  margin: 0 auto;
+  line-height: 14px;
+  padding: 0 0 20px;
+  text-align: center;
+  padding-top: 10px;
+}
+
 .main{
   margin: 20px 70px;
+}
+
+.sectionTitle {
+  padding: 8px 11px 8px 5px;
+  color: #fff;
+  font-size: 12pt;
+}
+#japan{
+  width: 1.5%;
 }
 
 .pic{
@@ -21,6 +41,12 @@
 .title{
   margin-top: -7px;
   font-size: 0.9em;
+}
+
+.cover{
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
 }
 
 .apple_pagination {

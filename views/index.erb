@@ -4,12 +4,26 @@
 
 <%= erb :header %>
 
+<div class="welcome">
+  <p>日経トレンディは創刊以来、毎年12月号にその年にトレンドとなったものを選出する「ヒット商品ベスト30」を掲載している。「ヒット商品」と銘打っているが「商品」だけでなくイベントや文芸・映画作品なども含まれることもあり、新語・流行語大賞と並び世相を反映したランキングとして年々注目度が増している。「ヒット商品ベスト30」と同時に「ヒット商品予測ランキング」も発表される。</p>
+</div>
+
 <div class="main">
+  <div class="sectionTitle">
+    <h2>Japanで急上昇  
+    <img id="japan" src="/assets/images/japan.jpg" />
+    </h2>
+    
+  </div>
+
   <div class="inline-block">
     <% @albums.each do |album| %>
       <div class="pic">
-        <img width="250" height="150" src="/assets/images/<%= album.url %>.jpg" alt="" />
-        <p class="title"><%= album.title %></p>
+        <img class="cover" src="/assets/images/<%= album.url %>.jpg" alt="" />
+        <div>
+        <p class="title"></p>
+        <%= album.title  %> &nbsp;&nbsp; 👍 2,544
+        </div>
       </div>
     <% end %>
   <div class="apple_pagination">
