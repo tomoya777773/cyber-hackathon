@@ -1,0 +1,61 @@
+
+h3{
+    text-align: center;
+  }
+.main{
+    background: #101010;
+    margin: 100px 100px;
+    padding: 50px 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#img_space{
+    position: relative;
+    width: 40%;
+    height: 350px;
+    background-color: #222222;
+}
+
+
+#img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+
+#content_space{
+    width: 58%;
+    background-color: #222222;
+    height: 350px;
+}
+
+#titles{
+    margin-top: 5px;
+    padding-left: 50px;
+    font-size: 1.5em;
+    display: flex;
+}
+
+#title{
+    padding-right:  20px;
+}
+
+#text{
+    margin-top: -15px;
+    padding-left: 50px;
+}
+
+#categori{
+    color: #FF8C00;
+    padding-left: 50px;
+}
+
+
