@@ -5,7 +5,8 @@ class CreateAlbums < ActiveRecord::Migration
       t.string :title
       t.text :text
       t.float :score
-      t.string :label
+      t.integer :category_id
+      t.timestamps null: false
     end
   end
-end
+end 
