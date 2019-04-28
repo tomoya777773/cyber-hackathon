@@ -25,6 +25,15 @@ get '/category' do
   erb :category
 end
 
+get '/images/:id' do
+  @image = Album.find(params[:id])
+  @title = @image["title"]
+  @text = @image["text"]
+  @image_path = "/assets/images/" + "#{@image["url"]}" + ".jpg"
+  erb :select
+end
+
+
 get '/ranking' do
   @albums = Album.order('score DESC').paginate(:page => params[:page], :per_page => 10)
   erb :index
@@ -35,12 +44,12 @@ post '/upload' do
   @title = params[:title]
   @text = params[:text]
   image = params[:image]
-  @image_path = "assets/images/" + "#{image["filename"]}"
+  @image_path = "/assets/images/" + "#{image["filename"]}"
   output_path = "public/assets/images/" + "#{image["filename"]}"
   File.open(output_path, 'w+b') do |fp|
     fp.write image["tempfile"].read
 
-  erb:finish_upload
+  erb :finish_upload
   end
 
 end

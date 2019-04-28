@@ -11,7 +11,8 @@ if Album.count == 0
         {url: "test7", title: "test7", text: "test7", score: 60, category_id: 3},
         {url: "test8", title: "test8", text: "test8", score: 70, category_id: 3},
         {url: "test9", title: "test9", text: "test9", score: 80, category_id: 3},
-        {url: "test10", title: "test10", text: "test10", score: 90, category_id: 3}
+        {url: "test10", title: "test10", text: "test10", score: 90, category_id: 3},
+        {url: "test11", title: "test11", text: "test11", score: 100, category_id: 3}
     ])
 end
 
