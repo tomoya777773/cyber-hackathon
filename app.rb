@@ -38,6 +38,11 @@ get '/images/:id' do
 end
 
 
+get '/category/:id' do
+  @albums = Album.where(category_id: params[:id]).paginate(:page => params[:page], :per_page => 5)
+  erb :index
+end
+
 get '/ranking' do
   @albums = Album.order('score DESC').paginate(:page => params[:page], :per_page => 10)
   erb :index

@@ -18,8 +18,8 @@ end
 
 if Category.count == 0
     Category.create([
-        {name: "たまごっち"},
-        {name: "スマートフォン"},
-        {name: "ガラケー"}
+        {name: "たまごっち", url: "tamagochi"},
+        {name: "スマートフォン", url: "smartphone"},
+        {name: "ガラケー", url: "cellphone"}
     ])
 end

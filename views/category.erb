@@ -1,5 +1,29 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" media="all" href="/assets/css/pic.css">
+
 <%= erb :header %>
-<% @categories.each do |category| %>
-    <p><%= category.id %><%= category.name %></P>
-<% end %>
+
+<div class="main">
+  <div class="sectionTitle">
+    <h2>カテゴリ</h2>
+  </div>
+
+  <div class="category">
+  <% @categories.each do |category| %>
+    <div class="pic">
+        <a href="/category/<%= category.id %>">
+            <img class="cover" src="/assets/images/thum/<%= category.url %>.jpg" alt="" />
+        </a>
+    <p>
+        <%= category.name %>
+    </p>
+    </div>
+　<% end %>    
+
+
+  </div>
+</div>
+ 
+
+
 <%= erb :footer %>
