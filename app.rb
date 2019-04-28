@@ -25,6 +25,12 @@ get '/category' do
   erb :category
 end
 
+get '/ranking' do
+  @albums = Album.order('score DESC').paginate(:page => params[:page], :per_page => 10)
+  erb :index
+end
+
+
 post '/upload' do
   @title = params[:title]
   @text = params[:text]
