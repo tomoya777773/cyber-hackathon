@@ -22,8 +22,7 @@
         <img class="cover" src="/assets/images/<%= album.url %>.jpg" alt="" />
         <div>
         <p class="title"></p>
-        <div><%= album.title  %> &nbsp;&nbsp; </div>
-        <div>👍 2,544</div>
+        <%= album.title  %> &nbsp;&nbsp; 👍 <%= album.score %>
         </div>
       </div>
     <% end %>

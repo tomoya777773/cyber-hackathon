@@ -1,0 +1,5 @@
+<%= erb :header %>
+<% @categories.each do |category| %>
+    <p><%= category.id %><%= category.name %></P>
+<% end %>
+<%= erb :footer %>
