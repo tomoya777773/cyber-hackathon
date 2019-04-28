@@ -12,12 +12,16 @@ require "./models/album.rb"
 helpers WillPaginate::Sinatra, WillPaginate::Sinatra::Helpers
 
 get '/' do
-  @albums = Album.all.paginate(:page => params[:page], :per_page => 5)
+  @albums = Album.all.paginate(:page => params[:page], :per_page => 10)
   erb :index
 end
 
 get '/upload' do
   erb :upload
+end
+
+get '/premium' do
+  erb :premium
 end
 
 get '/category' do
